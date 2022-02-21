@@ -1,0 +1,12 @@
+{% extends "base.html.twig" %}
+{% import "_macros/alert.html.twig" as newAlert%}
+
+{% block body %}
+    {{ newAlert.alert("welcome in the page") }}
+    {% for article in listArticle %}
+        <div class="articles">
+            <h2>{{ article.author }}</h2>
+            <p>{{ article.content | emoji }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
