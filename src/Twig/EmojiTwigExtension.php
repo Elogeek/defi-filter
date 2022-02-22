@@ -16,12 +16,12 @@ class EmojiTwigExtension extends AbstractExtension {
     }
 
     public function emojiFilter(string $text):string {
-        $newText = $text;
-        $newText = str_replace(":-)", "🙂", $newText);
-        $newText = str_replace(";-)", "😉", $newText);
-        $newText = str_replace(":-|", "😐", $newText);
-        $newText = str_replace(":poop:", "💩", $newText);
+        $newT = $text;
+        $newT = str_replace(":-)", "🙂", $newT);
+        $newT = str_replace(";-)", "😉", $newT);
+        $newT = str_replace(":-|", "😐", $newT);
+        $newT = str_replace(":poop:", "💩", $newT);
 
-        return "$newText";
+        return "$newT";
     }
 }
